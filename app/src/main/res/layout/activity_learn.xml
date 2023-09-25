@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--       our AppBarLayout is just used to contain our self-defined toolbar -->
+    <!--        This can resolve the problem of the overlap of the toolbar and the recyclerview -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/learn_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+<!--    a fragment contains word and pronounce-->
+    <FrameLayout
+        android:id="@+id/word_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="150dp">
+
+        <fragment
+            android:id="@+id/word_content_fragment"
+            android:name="com.example.kingofthewords.WordsContentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+<!--    a group of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+<!--        Button "I know"-->
+        <Button
+            android:id="@+id/btn_learn_know"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_btn_long"
+            android:text="I Know"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+<!--        Button "give some hint"-->
+        <Button
+            android:id="@+id/btn_learn_hint"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_btn_long"
+            android:text="Hint"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

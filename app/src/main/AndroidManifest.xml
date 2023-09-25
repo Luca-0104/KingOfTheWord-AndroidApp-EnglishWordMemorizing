@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.kingofthewords">
+    <!-- The permission for internet requests, due to we are going to use the glide to load the picture from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- The permissions for reading and writing the files -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme">
+        <activity android:name=".ReviewActivity"></activity>
+        <activity
+            android:name=".SetNotifyActivity"
+            android:label="Notification Setting"></activity> <!-- The service of system notification -->
+        <service
+            android:name=".services.MyNotification"
+            android:enabled="true"
+            android:process="system" /> <!-- The service of daily progress resting -->
+        <service
+            android:name=".services.ProgressCleaner"
+            android:enabled="true"
+            android:process="system" />
+
+        <activity
+            android:name=".TaskCheckActivity"
+            android:label="Task Checking" />
+        <activity android:name=".FinishLearnActivity" />
+        <activity
+            android:name=".LearnDetailActivity"
+            android:theme="@style/MyTheme2" />
+        <activity
+            android:name=".LearnActivity"
+            android:theme="@style/MyTheme2" />
+        <activity android:name=".util.DataInsertActivity">
+
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="KOWords"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="KOWords"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BookDetailActivity" />
+        <activity
+            android:name=".TaskManageActivity"
+            android:label="Task Management" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:label="My Profile" />
+        <activity
+            android:name=".MyBooksActivity"
+            android:label="My Bookshelf" />
+        <activity
+            android:name=".MoreBooksActivity"
+            android:label="Book Store" />
+        <activity
+            android:name=".MainActivity"
+            android:label="KOWords" />
+    </application>
+
+</manifest>

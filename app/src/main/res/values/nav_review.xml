@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the text style when the nav item is selected -->
+    <style name="review_nav_activate">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FF8000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- the text style when the nav item is not selected -->
+    <style name="review_nav_inactivate">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+</resources>

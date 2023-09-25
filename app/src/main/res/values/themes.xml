@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KingOfTheWords" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--    a self-defined Theme, which has no actionbar -->
+<!--    <style name="MyTheme" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+    <style name="MyTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#FF8000</item>
+        <item name="android:textColorPrimary">#FFF</item>
+        <item name="android:statusBarColor">#A4A4A4</item>
+    </style>
+
+    <!--
+        A self defined theme for the activities that do not use NavView.
+        Do not know why, activities using NavView can not use Theme...Bridge.
+        Further, if we do not user Theme...Bridge, it is unable to change the color and style of buttons.
+        This is really annoying!!!
+    -->
+    <style name="MyTheme2" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">#FF8000</item>
+        <item name="android:textColorPrimary">#FFF</item>
+        <item name="android:statusBarColor">#A4A4A4</item>
+    </style>
+
+
+<!--    a style for customized dialog
+        (This is partly copied from the internet)-->
+    <style name="myDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColor">@android:color/holo_orange_light</item>
+        <item name="android:textColorPrimary">@android:color/holo_orange_light</item>
+        <item name="android:background">#5b5b5b</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+</resources>

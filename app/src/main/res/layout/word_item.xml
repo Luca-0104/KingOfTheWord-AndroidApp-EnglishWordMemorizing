@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:paddingStart="15dp">
+
+<!--    the word spelling and the phonetic symbol -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+<!--        The word spelling -->
+        <TextView
+            android:id="@+id/word_item_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textSize="20sp"
+            android:textColor="#FF8000"/>
+
+<!--        The phonetic symbol -->
+        <TextView
+            android:id="@+id/word_item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+<!--   an single translation and property -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+<!--        the word property -->
+        <TextView
+            android:id="@+id/word_item_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textSize="20sp"/>
+
+<!--        Chinese translation -->
+        <TextView
+            android:id="@+id/word_item_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Test"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <!--    a divider line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF8000"
+        android:layout_marginTop="5dp"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp"
+        >
+
+
+        <!--
+                This is the fragment of type2 in learnActivity
+                (contains word details and a 'next' button)
+        -->
+
+        <!--    word-->
+        <TextView
+            android:id="@+id/tv_detail_frag_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+        <!--    phonetic symbols (US + UK)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--        US phonetic symbol-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="US: "
+                    android:textSize="13sp"
+                    android:textColor="#5B5B5B"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="7dp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_frag_us_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:textColor="#5B5B5B"
+                    android:layout_marginTop="10dp"
+                    />
+
+<!--                the button for us audio-->
+                <Button
+                    android:id="@+id/btn_detail_frag_us_audio"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/selector_audio_btn"
+                    android:focusable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:soundEffectsEnabled="false"/>
+
+
+            </LinearLayout>
+
+            <!--        UK phonetic symbol-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UK: "
+                    android:textSize="13sp"
+                    android:textColor="#5B5B5B"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="7dp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_frag_uk_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test"
+                    android:textSize="13sp"
+                    android:textColor="#5B5B5B"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <!--                the button for uk audio-->
+                <Button
+                    android:id="@+id/btn_detail_frag_uk_audio"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/selector_audio_btn"
+                    android:focusable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:soundEffectsEnabled="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--
+            a card of translations
+        -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chinese Translations"
+                    android:textSize="15sp"
+                    android:textColor="#E37200"
+                    android:padding="4dp"
+                    android:layout_margin="10dp"
+                    android:background="#FFE5CB"/>
+
+                <!--                        a recyclerView contains a list of translations -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_detail_frag_trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--
+            a card of example sentences
+        -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example Sentences"
+                    android:textSize="15sp"
+                    android:textColor="#E37200"
+                    android:padding="4dp"
+                    android:layout_margin="10dp"
+                    android:background="#FFE5CB"/>
+
+                <!--     a recyclerView contains a list of example sentences -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_detail_frag_eg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--
+        This is the fragment of type1 in learnActivity
+        (contains a word and a audio and an invisible hint)
+-->
+    <TextView
+        android:id="@+id/tv_content_frag_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestWord"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_gravity="center"/>
+
+
+    <!--    phonetic symbols (US + UK)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="8dp">
+
+        <!--        US phonetic symbol-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="US: "
+                android:textSize="16sp"
+                android:textColor="#5B5B5B"
+                android:layout_marginRight="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_content_frag_us_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"
+                android:textSize="16sp"
+                android:textColor="#5B5B5B"
+                />
+
+            <Button
+                android:id="@+id/btn_content_frag_us_audio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_audio_btn"
+                android:focusable="true"
+                android:layout_marginLeft="10dp"
+                android:soundEffectsEnabled="false"/>
+
+        </LinearLayout>
+
+        <!--        UK phonetic symbol-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UK: "
+                android:textSize="16sp"
+                android:textColor="#5B5B5B"
+                android:layout_marginRight="7dp"/>
+
+            <TextView
+                android:id="@+id/tv_content_frag_uk_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"
+                android:textSize="16sp"
+                android:textColor="#5B5B5B"
+                />
+
+            <Button
+                android:id="@+id/btn_content_frag_uk_audio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_audio_btn"
+                android:focusable="true"
+                android:layout_marginLeft="10dp"
+                android:soundEffectsEnabled="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--The hint-->
+    <LinearLayout
+        android:id="@+id/ll_content_frag_hint"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_hint"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e.g."
+            android:textSize="15sp"
+            android:textColor="#E37200"
+            android:background="@drawable/bg_hint_eg"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"/>
+
+        <TextView
+            android:id="@+id/tv_content_frag_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TestHint"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="15dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

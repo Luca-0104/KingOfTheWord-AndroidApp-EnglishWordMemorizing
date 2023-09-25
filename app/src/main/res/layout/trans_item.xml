@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--
+            This defines how each piece of translation
+            in the recyclerView of WordsDetailFragment looks like
+         -->
+
+        <!--    The part of speech of this chinese translation-->
+        <TextView
+            android:id="@+id/tv_trans_item_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <!--    The chinese translation-->
+        <TextView
+            android:id="@+id/tv_trans_item_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="testTrans"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <!--    a divider line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF8000"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

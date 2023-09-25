@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f1">
+
+    <!--       our AppBarLayout is just used to contain our self-defined toolbar -->
+    <!--        This can resolve the problem of the overlap of the toolbar and the recyclerview -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/review_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+<!--    content here -->
+
+<!--    a nav view to choose reviewed words and not reviewed words -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/review_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:itemTextAppearanceActive="@style/review_nav_activate"
+        app:itemTextAppearanceInactive="@style/review_nav_inactivate"
+        app:menu="@menu/buttom_nav_review" />
+
+    <!--    a fragment contains fragment of words -->
+    <FrameLayout
+        android:id="@+id/review_words_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="#f1f1f1">
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:paddingStart="15dp">
+
+    <!--    the word spelling and the phonetic symbol -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_review_word_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <!--        The word spelling -->
+            <TextView
+                android:id="@+id/review_word_item_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:textSize="20sp"
+                android:textColor="#FF8000"/>
+
+            <!--        The phonetic symbol -->
+            <TextView
+                android:id="@+id/review_word_item_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!--                the button for us audio-->
+            <Button
+                android:id="@+id/btn_review_word_item_us_audio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_audio_btn"
+                android:focusable="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right"
+                android:soundEffectsEnabled="false"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--   an single translation and property -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <!--        the word property -->
+        <TextView
+            android:id="@+id/review_word_item_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textSize="20sp"/>
+
+        <!--        Chinese translation -->
+        <TextView
+            android:id="@+id/review_word_item_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Test"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+<!--    a cover of the translation, which should be visible at beginning -->
+    <View
+        android:id="@+id/review_word_item_cover"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="-30dp"
+        android:background="#979797"/>
+
+    <!--    a divider line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF8000"
+        android:layout_marginTop="5dp"/>
+
+
+
+</LinearLayout>

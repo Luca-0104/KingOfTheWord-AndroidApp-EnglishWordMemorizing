@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        The basic aesthetic idea of the structure of the side menu
+         is learned from book - "The First Line of Code in Android 2nd Edition"
+    -->
+
+
+<!--
+    This is the menu body of our side menu
+-->
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/icon_sidemenu_profile"
+            android:title="My Profile"/>
+
+        <item
+            android:id="@+id/menu_my_books"
+            android:icon="@drawable/icon_sidemenu_my_books"
+            android:title="My Word Books"/>
+
+        <item
+            android:id="@+id/menu_more_books"
+            android:icon="@drawable/icon_sidemenu_more_books"
+            android:title="Get More Books"/>
+
+        <item
+            android:id="@+id/menu_daily_task"
+            android:icon="@drawable/icon_sidemenu_task_todo"
+            android:title="To Do Today"/>
+
+        <item
+            android:id="@+id/menu_task_manage"
+            android:icon="@drawable/icon_sidemenu_task_manage"
+            android:title="Task Management"/>
+
+        <item
+            android:id="@+id/menu_notify"
+            android:icon="@drawable/icon_sidemenu_notification"
+            android:title="Reminder Setting"/>
+
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/icon_sidemenu_quit"
+            android:title="Log Out"/>
+
+    </group>
+</menu>

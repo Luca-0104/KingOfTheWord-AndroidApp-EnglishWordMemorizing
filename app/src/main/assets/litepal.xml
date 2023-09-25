@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--
+    	Define the database name of our application.
+    -->
+    <dbname value="WordApp" />
+
+    <!--
+    	Define the version of our database.
+    -->
+    <version value="22" />
+
+    <!--
+    	Define our models in the list with mapping tag, LitePal will
+    	create tables for each mapping class.
+    -->
+    <list>
+
+        <!--   define our javabean classes here, which are representing the tables    -->
+        <mapping class="com.example.kingofthewords.dbModels.Word" />
+        <mapping class="com.example.kingofthewords.dbModels.Book" />
+        <mapping class="com.example.kingofthewords.dbModels.Translation" />
+        <mapping class="com.example.kingofthewords.dbModels.Sentence" />
+        <mapping class="com.example.kingofthewords.dbModels.Task" />
+        <mapping class="com.example.kingofthewords.dbModels.User" />
+        <mapping class="com.example.kingofthewords.dbModels.UserWord" />
+
+    </list>
+
+</litepal>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:padding="10dp"
+    android:background="?attr/colorPrimary"
+    >
+
+<!--
+        This is the layout of the menu header of our side menu
+-->
+
+
+<!--    a circled avatar of the user (now is default)-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/header_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/default_avatar"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="15dp"/>
+
+<!--    a group of user information-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <!--    The username -->
+        <TextView
+            android:id="@+id/side_menu_header_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Username"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+
+<!--        The user account balance -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance: "
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/side_menu_header_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@drawable/icon_coin"
+                android:drawablePadding="15dp"/>
+
+        </LinearLayout>
+
+        <!-- the user email -->
+        <TextView
+            android:id="@+id/side_menu_header_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TestEmail@gmail.com"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
